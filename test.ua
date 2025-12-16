@@ -1,4 +1,5 @@
-In ← ≡◇(⊜□⊸≠@\t) ⊜□⊸≠@\n &fras "table.tsv"
+Dbg ← 0
+In  ← ≡◇(⨬(|&p ⊸⧻ &p.) Dbg ⊜□⊸≠@\t) ⊜□⊸≠@\n &fras "table.tsv"
 
 EC  ← 5
 EOC ← 6
@@ -8,10 +9,10 @@ EOC ← 6
 ↘₁In
 ≡(
   °⊟⊏ EC_EOC
-  &runc ⊸⊂[□"uiua" □"eval" □ "--"]
+  &runc ⊸⊂[□"uiua" □"eval" □"--no-color" □"--"]
   =0
   ⨬(|4.0 &p $"Uiua failed when testing _" ⊙◌◌◌
-  | ?◇≍▽⊸(≥@!)⊙˜⊙∘◌
+  | ?◇≍∩◇(▽⊸(≥@!))⊙˜⊙∘◌
     ⨬(|1.0 &p $"Wrong answer when testing _"|◌)
   )
 )
