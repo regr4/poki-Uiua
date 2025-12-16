@@ -8,7 +8,7 @@ Poki Uiua is a searchable collection of some short Uiua phrases intended for bot
 
 Note that Internet Explorer is not supported.
 
-Poki Uiua can also be used for [exercising your Uiua skills](https://mlochbaum.github.io/bqncrate/quiz). (todo fix link)
+Poki Uiua can also be used for [exercising your Uiua skills](https://regr4.github.io/poki-Uiua/quiz). (todo fix link)
 
 ## TODO:
 - find a format for table.tsv that is more convenient to edit.
