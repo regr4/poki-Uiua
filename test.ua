@@ -1,5 +1,5 @@
 Dbg ← 0
-In  ← ≡◇(⨬(|&p ⊸⧻ &p.) Dbg ⊜□⊸≠@\t) ⊜□⊸≠@\n &fras "table.tsv"
+In  ← ≡◇(⨬(|&p ⊸⧻ ⟜&p) Dbg ⊜□⊸≠@\t) ⊜□⊸≠@\n &fras "table.tsv"
 
 EC  ← 5
 EOC ← 6
