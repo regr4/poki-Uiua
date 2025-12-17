@@ -1,8 +1,8 @@
 Dbg ← 0
 In  ← ≡◇(⨬(|&p ⊸⧻ ⟜&p) Dbg ⊜□⊸≠@\t) ⊜□⊸≠@\n &fras "table.tsv"
 
-EC  ← 5
-EOC ← 6
+EC  ← 6
+EOC ← 7
 
 ⍤⤙≍ "EXAMPLE" °□ ⊡EC ⊡0 In
 ⍤⤙≍ "EXAMPLE OUTPUT" °□ ⊡EOC ⊡0 In

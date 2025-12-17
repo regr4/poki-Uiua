@@ -10,6 +10,7 @@ with open("table.tsv", "a", encoding="utf-8") as f:
         description = input("Description: ")
         class_ = input("Class: ")
         category = input("Category: ")
+        polymorphic = input("Is it rank-polymorphic? (true/false/irrelevant)")
         keywords = input("Keywords: ")
         example = input("Example: ")
         example_output = input("Example output: ")
@@ -20,6 +21,7 @@ with open("table.tsv", "a", encoding="utf-8") as f:
                     description,
                     class_,
                     category,
+                    polymorphic,
                     keywords,
                     example,
                     example_output,

@@ -1,24 +1,25 @@
-SYNTAX	DESCRIPTION					CLASS		CATEGORY	KEYWORDS	EXAMPLE				EXAMPLE OUTPUT
-+	Add						Primitive	Number		add addition	+ 1 3				4
--@0	Convert digit to number				Idiom		String		digits number	-@0 @5				5
-⇌⍉	Rotate a matrix 90 degrees counterclockwise	Idiom		Array		rotate matrix	♭ ⇌⍉  ↯2_2⇡4			[1 3 0 2]
-⍜△¯	Rotate a matrix 180 degrees counterclockwise	Idiom		Array		rotate matrix	♭ ⍜△¯ ↯2_2⇡4			[3 2 1 0]
-⊜□⊸≠	Split on an element				Idiom		Array		split string	⊜□⊸≠ @\s "split this on spaces"	["split"│"this"│"on"│"spaces"]
-⊏	apply a permutation	Primitive	Maths	permutation	⊏ 1_2_0_3 "abcd"	"bcad"
-⇡	identity permutation	Primitive	Maths	permutation	⇡4	[0 1 2 3]
-⊏	compose permutations	Primitive	Maths	permutation	⊏ 1_0_2_3 2_3_0_1	[3 2 0 1]
-⍏	Invert a permutation				Primitive	Maths		inverse		⍏ [1 2 0 3]			[2 0 1 3]
--⊸¬	linearly map [0, 1] onto [-1, 1]	Idiom	Number	wrench stretch lerp	⁅₁₀ -⊸¬ ÷⟜⇡ 5	[¯1 ¯0.6 ¯0.2 0.2 0.6]
-∿	sine	Primitive	Number	sin trig math	∿ 0	0
-∿+η	cosine	Idiom	Number	cos trig math	∿+η 0	1
-⍜°√/+	euclidean norm	Idiom	Number	distance vector length size	⍜°√/+ 3_4	5
-/+⌵	taxicab norm	Idiom	Number	distance vector length size manhattan	/+⌵ ¯3_2	5
-/↥⌵	Chebyshev norm	Idiom	Number	distance vector length size maximum	/↥⌵ ¯4_7	7
-÷⊃⧻/+	arithmetic mean	Idiom	Number	average AM	÷⊃⧻/+ ⇡5	2
-⌝ⁿ⊃⧻/×	geometric mean	Idiom	Number	average GM	⁅₁₀ ⌝ⁿ⊃⧻/× 3_27_6561	81
-⍜°√(÷⊃⧻/+)	quadratic mean	Idiom	Number	root mean square average QM RMS	⁅₃ ⍜°√(÷⊃⧻/+) [1 2 3 4]	2.739
-⧻⊚	count number of 1s in boolean array	Idiom	Array	how many	⧻⊚ ◿2↯3_3⇡9	4
-+@a⇡26	lowercase latin alphabet	Idiom	String	alphabet letter	+@a⇡26	"abcdefghijklmnopqrstuvwxyz"
-⌵	uppercase	Primitive	String	capitalize capital letter	⌵ "HeLlO WoRlD"	"HELLO WORLD"
-¯	toggle case	Primitive	String	uppercase capital lowercase letter	¯ "HeLlO WoRlD"	"hElLo wOrLd"
-×⊃(≥@0|≤@9)	is a character a digit?	Idiom	String	number parse	×⊃(≥@0|≤@9) "a98sf98-34 "	[0 1 1 0 0 1 1 0 1 1 0]
+SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTPUT
++	Add	Primitive	Number	true	add addition	+ 1 3	4
+-@0	Convert digit to number	Idiom	String	true	digits number	-@0 @5	5
+⇌⍉	Rotate a matrix 90 degrees counterclockwise	Idiom	Array	false	rotate matrix	♭ ⇌⍉  ↯2_2⇡4	[1 3 0 2]
+⍜△¯	Rotate a matrix 180 degrees counterclockwise	Idiom	Array	true	rotate matrix	♭ ⍜△¯ ↯2_2⇡4	[3 2 1 0]
+⊜□⊸≠	Split on an element	Idiom	Array	false	split string	⊜□⊸≠ @\s "split this on spaces"	["split"│"this"│"on"│"spaces"]
+⊏	apply a permutation	Primitive	Maths	false	permutation	⊏ 1_2_0_3 "abcd"	"bcad"
+⇡	identity permutation	Primitive	Maths	false	permutation	⇡4	[0 1 2 3]
+⊏	compose permutations	Primitive	Maths	false	permutation	⊏ 1_0_2_3 2_3_0_1	[3 2 0 1]
+⍏	Invert a permutation	Primitive	Maths	false	inverse	⍏ [1 2 0 3]	[2 0 1 3]
+-⊸¬	linearly map [0, 1] onto [-1, 1]	Idiom	Number	true	wrench stretch lerp	⁅₁₀ -⊸¬ ÷⟜⇡ 5	[¯1 ¯0.6 ¯0.2 0.2 0.6]
+∿	sine	Primitive	Number	true	sin trig math	∿ 0	0
+∿+η	cosine	Idiom	Number	true	cos trig math	∿+η 0	1
+⍜°√/+	euclidean norm	Idiom	Number	false	distance vector length size	⍜°√/+ 3_4	5
+/+⌵	taxicab norm	Idiom	Number	false	distance vector length size manhattan	/+⌵ ¯3_2	5
+/↥⌵	Chebyshev norm	Idiom	Number	false	distance vector length size maximum	/↥⌵ ¯4_7	7
+÷⊃⧻/+	arithmetic mean	Idiom	Number	false	average AM	÷⊃⧻/+ ⇡5	2
+⌝ⁿ⊃⧻/×	geometric mean	Idiom	Number	false	average GM	⁅₁₀ ⌝ⁿ⊃⧻/× 3_27_6561	81
+⍜°√(÷⊃⧻/+)	quadratic mean	Idiom	Number	false	root mean square average QM RMS	⁅₃ ⍜°√(÷⊃⧻/+) [1 2 3 4]	2.739
+⧻⊚	count number of 1s in boolean array	Idiom	Array	true	how many	⧻⊚ ◿2↯3_3⇡9	4
++@a⇡26	lowercase latin alphabet	Idiom	String	irrelevant	alphabet letter	+@a⇡26	"abcdefghijklmnopqrstuvwxyz"
+⌵	uppercase	Primitive	String	true	capitalize capital letter	⌵ "HeLlO WoRlD"	"HELLO WORLD"
+¯	toggle case	Primitive	String	true	uppercase capital lowercase letter	¯ "HeLlO WoRlD"	"hElLo wOrLd"
+×⊃(≥@0|≤@9)	is a character a digit?	Idiom	String	true	number parse	×⊃(≥@0|≤@9) "a98sf98-34 "	[0 1 1 0 0 1 1 0 1 1 0]
+∊⇡10-@0	is character a digit?	Idiom	String	true	number parse	∊⇡10-@0 "abcd012689aklfs"	[0 0 0 0 1 1 1 1 1 1 0 0 0 0 0]
