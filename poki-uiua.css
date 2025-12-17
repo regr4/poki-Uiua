@@ -26,6 +26,6 @@ td:first-child a:before{display:inline-block;position:relative;margin-left:0.33e
 #w{background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 @media(max-width:910px){s{display:none}}
 @media(max-width:420px){.o,#m{display:none} #u{text-align:right} #q{margin-right:0}}
-tr:nth-child(1){width: 25%}
-tr:nth-child(2){width: 50%}
-tr:nth-child(3){width: 25%}
+tr :nth-child(1){width: 25%}
+tr :nth-child(2){width: 50%}
+tr :nth-child(3){width: 25%}
