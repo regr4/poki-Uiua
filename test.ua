@@ -12,7 +12,7 @@ EOC ← 6
   &runc ⊸⊂[□"uiua" □"eval" □"--no-color" □"--"]
   =0
   ⨬(|4.0 &p $"Uiua failed when testing _" ⊙◌◌◌
-  | ?◇≍∩◇(▽⊸(≥@!))⊙˜⊙∘◌
+  | ◇≍∩◇(▽⊸(≥@!))⊙˜⊙∘◌
     ⨬(|1.0 &p $"Wrong answer when testing _"|◌)
   )
 )
