@@ -5,12 +5,14 @@ I=_=>{
   b.className=0==s.get("w")?"w":0==s.get("b")?"b":""
   um.href="quiz?"+b.className
   fetch("table.tsv").then(d=>d.text()).then(d=>{
-    ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).slice(1,-1).map(r=>r.split("\t"))
+    ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).slice(1,-1).map(r=>r.split("\t").filter(w=>w!=""))
     c=ps.map(r=>r[0])
     e=ps.map(r=>r[1])
+      isprim=ps.map(r=>r[2]=="Primitive")
+      console.log(isprim)
     p=d.split(/\r?\n/g).slice(1,-1).map(x=>x.toLowerCase().replace(/http\S+\t/,"(>)").replace(/http\S+$/,"(?)"))
     r=""
-    for(var i=0;i<c.length;i++){r+='<tr><td>'+c[i]+'</td><td>'+e[i]+'</td></tr>'}
+      for(var i=0;i<c.length;i++){r+='<tr><td>'+(isprim[i] ? c[i] + " <a href=\"https://www.uiua.org/docs/" + c[i]+ "\"/>" : c[i])+'</td><td>'+e[i]+'</td></tr>'}
     t.innerHTML=r
     F(Q(q.value=s.get("q")))})}
 Q=_=>{
