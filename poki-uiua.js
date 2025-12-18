@@ -15,7 +15,7 @@ I = _ => {
         c = ps.map(r => r[0])
         e = ps.map(r => r[1])
         isprim = ps.map(r => r[2] == "Primitive")
-	rankpoly = ps.map(r => Object({true: "<span class=\"emoji\">✅</span> rank-polymorphic", false: "<span class=\"emoji\">❌</span> not polymorphic", irrelevant: "<span class=\"emoji\">➖</span> niladic"})[r[4]])
+	rankpoly = ps.map(r => Object({true: "<span class=\"emoji\">✅</span> rank-polymorphic", false: "<span class=\"emoji\">❌</span> not polymorphic", irrelevant: "<span class=\"emoji\">➖</span> N/A"})[r[4]])
         p = d.split(/\r?\n/g).slice(1, -1).map(x => x.toLowerCase().replace(/http\S+\t/, "(>)").replace(/http\S+$/, "(?)"))
         r = ""
         for (var i = 0; i < c.length; i++) {
