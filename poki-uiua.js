@@ -20,7 +20,7 @@ I = _ => {
         r = ""
         for (var i = 0; i < c.length; i++) {
 	    console.log(e[i])
-            r += `<tr><td> ${c[i]} </td><td> <a href="https://www.uiua.org/docs/${encodeURIComponent(c[i])}"/></td><td> ${e[i]} </td><td> ${rankpoly[i]} </td></tr>`
+            r += `<tr><td>${c[i]}</td><td><a href="https://www.uiua.org/docs/${encodeURIComponent(c[i])}"/></td><td>${e[i]}</td><td>${rankpoly[i]}</td></tr>`
         }
         t.innerHTML = r
         F(Q(q.value = s.get("q")))
