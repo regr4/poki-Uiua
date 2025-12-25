@@ -15,6 +15,7 @@ with open("table.tsv", "a", encoding="utf-8") as f:
         keywords = input("Keywords: ")
         example = input("Example: ")
         example_output = input("Example output: ")
+        experimental = input("Is it experimental? (true/false): ")
         f.write(
             "\t".join(
                 [
@@ -26,6 +27,7 @@ with open("table.tsv", "a", encoding="utf-8") as f:
                     keywords,
                     example,
                     example_output,
+                    experimental,
                 ]
             )
             + "\n"

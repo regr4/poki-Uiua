@@ -1,5 +1,5 @@
 SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTPUT	EXPERIMENTAL
-¬	logical not; 1-x	Primitive	Maths	true	boolean	¬ 7	¯6	false
+¬	calculate 1-x	Primitive	Maths	true	subtract	¬ 7	¯6	false
 ±	sign of a number	Primitive	Maths	true	signum normalise normalize unit	± -₂⇡5	[¯1 ¯1 0 1 1]	false
 ±	normalise a complex number	Primitive	Maths	true	normalize unit	⁅₅ ± ℂ4 3	0.6+0.8i	false
 ±	get case of a character	Primitive	String	true	uppercase lowercase letter	± "abAB,."	[¯1 ¯1 1 1 0 0]	false
@@ -17,7 +17,7 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 ⇡	identity permutation	Primitive	Maths	false	permutation	⇡4	[0 1 2 3]	false
 ⊏	compose permutations	Primitive	Maths	false	permutation	⊏ 1_0_2_3 2_3_0_1	[3 2 0 1]	false
 ⍏	invert a permutation	Primitive	Maths	false	inverse	⍏ [1 2 0 3]	[2 0 1 3]	false
--⊸¬	linearly map [0, 1] onto [-1, 1]	Idiom	Maths	true	wrench stretch lerp	⁅₁₀ -⊸¬ ÷⟜⇡ 5	[¯1 ¯0.6 ¯0.2 0.2 0.6]	false
+-⊸¬	linearly map [0, 1] onto [-1, 1]	Idiom	Maths	true	wrench stretch lerp interpolation	⁅₁₀ -⊸¬ ÷⟜⇡ 5	[¯1 ¯0.6 ¯0.2 0.2 0.6]	false
 ∿	sine	Primitive	Maths	true	sin trig math	∿ 0	0	false
 ∿+η	cosine	Idiom	Maths	true	cos trig math	∿+η 0	1	false
 ∂∿	cosine	Idiom	Maths	true	cos trig math	⁅₁₀ ∂∿ η	0	true
@@ -53,10 +53,19 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 ⍜∩⋯⬚0↥	bitwise or	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0↥ ⊸+₂⇡5	[2 3 6 7 6]	false
 ⍜⋯¬	bitwise not	Idiom	Maths	true	bitwise boolean	⍜⋯¬ ⇡8	[7 6 5 4 3 2 1 0]	false
 ⍜∩⋯⬚0≠	bitwise xor	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0≠ ⊸+₂⇡5	[2 2 6 6 2]	false
-×	boolean and	Primitive	Maths	true	boolean conjunction	× 0 1	0	false
-↥	boolean or	Primitive	Maths	true	boolean disjunction	↥ 0 1	1	false
-≠	boolean xor	Primitive	Maths	true	exclusive or disjunction boolean	≠ 0 1	1	false
-=	boolean xnor	Primitive	Maths	true	boolean material biconditional	= 0 1	0	false
-≥	boolean implication	Primitive	Maths	true	material conditional implies	≥ 0 1	1	false
-∨	gcd; boolean or	Idiom	Maths	true	greatest common divisor disjunction	∨ ⟜+₄⇡5	[4 1 2 1 4]	true
+¬	boolean not	Primitive	Maths	true	logical complement	¬ 1	0	false
+×	boolean and	Primitive	Maths	true	logical conjunction	× 0 1	0	false
+↥	boolean or	Primitive	Maths	true	logical disjunction	↥ 0 1	1	false
+≠	boolean xor	Primitive	Maths	true	exclusive or disjunction logical	≠ 0 1	1	false
+=	boolean xnor	Primitive	Maths	true	logical material biconditional	= 0 1	0	false
+≥	boolean implication	Primitive	Maths	true	material conditional implies logical	≥ 0 1	1	false
+∨	boolean or	Primitive	Maths	true	greatest common divisor disjunction	∨ 0 1	1	true
+∨	gcd	Primitive	Maths	true	greatest common divisor disjunction	∨ ⟜+₄⇡5	[4 1 2 1 4]	true
 ÷⊃∨×	lcm	Idiom	Maths	true	least common multiple	÷⊃∨× ⟜+₄⇡5	[0 5 6 21 8]	true
+⌵	absolute value	Primitive	Maths	true	abs modulus	⌵ -₂⇡5	[2 1 0 1 2]	false
+⁅	round	Primitive	Maths	true	rounding	⁅π	3	false
+⁅₂	round to 2 decimal places	Primitive	Maths	true	rounding	⁅₂ π	3.14	false
+⍜×⁅ ˜ⁿ10	round to some number of decimal places	Idiom	Maths	true	rounding	⍜×⁅ ˜ⁿ10 4 π	3.1416	false
+≍	are arrays identical?	Primitive	Array	irrelevant	match equal equivalent	≍ [3 4] [3 4 5]	0	false
+=	check equality	Primitive	Array	true	equal identical equivalent match	= 1_2_3 1_2_4	[1 1 0]	false
+path	find path in graph	Primitive	Other	irrelevant	dijkstra A* graph	⊢path(+A₁|=₃)0	[0 1 2 3]	false
