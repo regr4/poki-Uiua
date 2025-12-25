@@ -60,7 +60,8 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 =	boolean xnor	Primitive	Maths	true	logical material biconditional	= 0 1	0	false
 ≥	boolean implication	Primitive	Maths	true	material conditional implies logical	≥ 0 1	1	false
 ∨	boolean or	Primitive	Maths	true	greatest common divisor disjunction	∨ 0 1	1	true
-∨	gcd	Primitive	Maths	true	greatest common divisor disjunction	∨ ⟜+₄⇡5	[4 1 2 1 4]	true
+∨	gcd	Primitive	Maths	true	greatest common divisor	∨ ⟜+₄⇡5	[4 1 2 1 4]	true
+◌⍢⤚◿≠₀	gcd	Idiom	Maths	false	greatest common divisor	◌⍢⤚◿≠₀ 10 4	2	false
 ÷⊃∨×	lcm	Idiom	Maths	true	least common multiple	÷⊃∨× ⟜+₄⇡5	[0 5 6 21 8]	true
 ⌵	absolute value	Primitive	Maths	true	abs modulus	⌵ -₂⇡5	[2 1 0 1 2]	false
 ⁅	round	Primitive	Maths	true	rounding	⁅π	3	false
