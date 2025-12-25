@@ -28,7 +28,7 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 ÷⊃⧻/+	arithmetic mean	Idiom	Maths	false	average AM	÷⊃⧻/+ ⇡5	2
 ⌝ⁿ⊃⧻/×	geometric mean	Idiom	Maths	false	average GM	⁅₁₀ ⌝ⁿ⊃⧻/× 3_27_6561	81
 ⍜°√(÷⊃⧻/+)	quadratic mean	Idiom	Maths	false	root mean square average QM RMS	⁅₃ ⍜°√(÷⊃⧻/+) [1 2 3 4]	2.739
-÷₂+∩⌟⊡⊃⌊⌈÷₂-₁⊸⧻⍆	Median	Idiom	Maths	true	average	÷₂+∩⌟⊡⊃⌊⌈÷₂-₁⊸⧻⍆ ⇡10	4.5
+÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆	Median	Idiom	Maths	true	average	÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆ ⇡10	4.5
 ⧻⊚	sum of natural array	Idiom	Array	true	how many	⧻⊚ ◿2↯3_3⇡9	4
 +@a⇡26	lowercase latin alphabet	Idiom	String	irrelevant	alphabet letter	+@a⇡26	"abcdefghijklmnopqrstuvwxyz"
 ⌵	uppercase	Primitive	String	true	capitalize capital letter	⌵ "HeLlO WoRlD"	"HELLO WORLD"
