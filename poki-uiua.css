@@ -3,10 +3,10 @@ i{display:none}
 html,body{height:100%}
 body{display:flex;flex-flow:column;margin:auto;max-width:max(85vw, 900px); font-size:16px;
   overflow:hidden;position:relative;color:#222;  content:"w";background:#ddd                   }  .w{background:#ddd;filter:invert(0)}
-@media(prefers-color-scheme:dark){body[class=""]{content:"g";background:#444;filter:invert(.85)} body[class=""] .emoji{filter:invert(1)}}
-.g{background:#444;filter:invert(.85)} .g .emoji{filter:invert(1)}
-@media(prefers-contrast:more)    {body[class=""]{content:"b";background:#222;filter:invert(1)} body[class=""] .emoji{filter:invert(1)} }
-.b{background:#222;filter:invert(1)} .b .emoji{filter:invert(1)}
+@media(prefers-color-scheme:dark){body[class=""]{content:"g";background:#444;filter:invert(.85)} body[class=""] .noinv{filter:invert(1)} body[class=""] .tk-s{color:#20f9fc}}
+.g{background:#444;filter:invert(.85)} .g .noinv{filter:invert(1)} .g .tk-s{color:#20f9fc}
+@media(prefers-contrast:more)    {body[class=""]{content:"b";background:#222;filter:invert(1)} body[class=""] .noinv{filter:invert(1)} }
+.b{background:#222;filter:invert(1)} .b .noinv{filter:invert(1)}
 .f{display:flex} .h{padding:0.5em}
 .o,#m{margin:0 0.35em} label{margin-left:0.35em}
 #q{flex:1;border:none;font-size:medium;margin-right:-1.5em} #x{margin-right:0.5em}
@@ -33,4 +33,4 @@ tr :nth-child(2){width: min(10vw, 50px)}
 tr :nth-child(3){width: 70%}
 tr :nth-child(4){width: min(20vw, 220px)}
 tr :nth-child(5){width: min(15vw, 150px)}
-.tk-n{color:#f08050}.tk-s{color:#20f9fc}.tk-mf{color:#95d16a}.tk-df{color:#54b0fc}.tk-mm{color:#f0c36f}.tk-dm{color:#cc6be9}
+.tk-n{color:#f08050}.tk-s{color:#1c9}.tk-mf{color:#95d16a}.tk-df{color:#54b0fc}.tk-mm{color:#f0c36f}.tk-dm{color:#cc6be9}
