@@ -1,8 +1,12 @@
 C = _ => F(history.replaceState({}, document.title, location.pathname + (q.value ? "?q=" + encodeURIComponent(q.value) : "")))
 F = _ => q.focus()
+R = {d:/[=≠≤≥+\-×*÷◿∨ⁿ↧↥∠ℂ≍⊟⊂⊏⊡↯↙↘↻⤸▽⌕⦷∊⨂⊥⍤]|&(gt|lt);/.source,m:/[¬±¯⌵⨪√ₑ∿⌊⌈⁅⧻△⇡⊢⊣⇌♭¤⋯⍆⍏⍖⊚◴⊛⧆⋕]/.source}
 highlight = c => 
-    c.replace(
-        /(?<s>@(&.*?;|\\.|.))|(?<n>¯?[0-9.ηπτ∞]+)|(?<mf>[¬±¯⌵⨪√ₑ∿⌊⌈⁅⧻△⇡⊢⊣⇌♭¤⋯⍉⍆⍏⍖⊚◴⊛⧆□⋕])|(?<df>[=≠≤≥+\-×*÷◿∨ⁿ↧↥∠ℂ≍⊟⊂⊏⊡↯↙↘↻⤸▽⌕⦷∊⨂⊥⍤]|&(gt|lt);)|(?<mm>[˙˜⊙⋅⟜⊸⤙⤚◠◡∩∧\/\\≡⍚⊞⧅⧈⍥⊕⊜⧋◇∪⌅°⌝⍩⩜∂∫])|(?<dm>[⊃⊓⍜⍢⬚⨬⍣])/g,
+    c.replace(new RegExp(String.raw`
+        (?<s>@(&.*?;|\\.|.))|(?<n>¯?[0-9.ηπτ∞]+)|
+        (?<mf>□(?!₂)|(${R.m}|${R.d})[₋₀-₉]+|${R.m})|(?<df>□₂|${R.d})|
+        (?<tra>⍉[₋₀-₉]*)|(?<bot>∩[₋₀-₉]*)|
+        (?<mm>[˙˜⊙⋅⟜⊸⤙⤚◠◡∧\/\\≡⍚⊞⧅⧈⍥⊕⊜⧋◇∪⌅°⌝⍩⩜∂∫][₋₀-₉]*)|(?<dm>[⊃⊓⍜⍢⬚⨬⍣][₋₀-₉]*|path)`.replace(/\s/g,""),"g"),
         (m,...g)=>`<span class="noinv tk-${Object.entries(g.at(-1)).find(e=>e[1])[0]}">${m}</span>`
     )
 I = _ => {
@@ -10,13 +14,14 @@ I = _ => {
     b.className = 0 == s.get("w") ? "w" : 0 == s.get("b") ? "b" : ""
     um.href = "quiz?" + b.className
     fetch("table.tsv").then(d => d.text()).then(d => {
-        ps = d.replace(/[<>&'"]/g, x => ({
+        ent = {
             '<': '&lt;',
             '>': '&gt;',
             '&': '&amp;',
             "'": '&apos;',
             '"': '&quot;',
-        } [x])).split(/\r?\n/g).slice(1, -1).map(r => r.split("\t").filter(w => w != ""))
+        }
+        ps = d.replace(/[<>&'"]/g, x => ent[x]).split(/\r?\n/g).slice(1, -1).map(r => r.split("\t").filter(w => w != ""))
         c = ps.map(r => r[0])
         h = c.map(highlight)
         e = ps.map(r => r[1])
@@ -26,8 +31,7 @@ I = _ => {
         p = d.split(/\r?\n/g).slice(1, -1).map(x => x.toLowerCase().replace(/http\S+\t/, "(>)").replace(/http\S+$/, "(?)"))
         r = ""
         for (var i = 0; i < c.length; i++) {
-	    // console.log(e[i])
-            r += `<tr><td>${h[i]}</td><td><a href="https://www.uiua.org/docs/${encodeURIComponent(c[i])}"/></td><td>${e[i]}</td><td>${rankpoly[i]}</td><td>${experimental[i]}</td></tr>`
+            r += `<tr><td>${h[i]}</td><td><a href="https://www.uiua.org/docs/${encodeURIComponent(c[i].replace(/&.*?;/g,s=>Object.entries(ent).find(kv=>kv[1]==s)[0]))}"/></td><td>${e[i]}</td><td>${rankpoly[i]}</td><td>${experimental[i]}</td></tr>`
         }
         t.innerHTML = r
         F(Q(q.value = s.get("q")))
