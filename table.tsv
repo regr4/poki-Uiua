@@ -24,13 +24,15 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 ∿+η	cosine	Idiom	Maths	true	cos trig math	∿+η 0	1	false
 ∂∿	cosine	Idiom	Maths	true	cos trig math	⁅₁₀ ∂∿ η	0	true
 ⍜°√/+	euclidean norm	Idiom	Maths	false	distance vector length size	⍜°√/+ 3_4	5	false
+⩜⌵	euclidean norm	Primitive	Maths	true	distance vector length size	⩜⌵ 3_4_12	13	true
 ⌵ℂ	euclidean norm (2d)	Idiom	Maths	true	distance vector length size	⌵ℂ 5 12	13	false
 /+⌵	taxicab norm	Idiom	Maths	false	distance vector length size manhattan	/+⌵ ¯3_2	5	false
 /↥⌵	Chebyshev norm	Idiom	Maths	false	distance vector length size maximum	/↥⌵ ¯4_7	7	false
-÷⊃⧻/+	arithmetic mean	Idiom	Maths	false	average AM	÷⊃⧻/+ ⇡5	2	false
-⌝ⁿ⊃⧻/×	geometric mean	Idiom	Maths	false	average GM	⁅₁₀ ⌝ⁿ⊃⧻/× 3_27_6561	81	false
+÷⊃⧻/+	arithmetic mean	Idiom	Maths	false	average mean AM	÷⊃⧻/+ ⇡5	2	false
+⌝ⁿ⊃⧻/×	geometric mean	Idiom	Maths	false	average mean GM	⁅₁₀ ⌝ⁿ⊃⧻/× 3_27_6561	81	false
 ⍜°√(÷⊃⧻/+)	quadratic mean	Idiom	Maths	false	root mean square average QM RMS	⁅₃ ⍜°√(÷⊃⧻/+) [1 2 3 4]	2.739	false
-÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆	Median	Idiom	Maths	true	average	÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆ ⇡10	4.5	false
+÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆	median	Idiom	Maths	true	average mean	÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆ ⇡10	4.5	false
+⊡⌊÷₂⊸⧻÷₂+⊸⇌⍆	median	Idiom	Maths	true	average mean	⊡⌊÷₂⊸⧻÷₂+⊸⇌⍆ °⍆ ⇡10	4.5	false
 ⧻⊚	sum of natural array	Idiom	Array	true	how many	⧻⊚ ◿2↯3_3⇡9	4	false
 +@a⇡26	lowercase latin alphabet	Idiom	String	irrelevant	alphabet letter	+@a⇡26	"abcdefghijklmnopqrstuvwxyz"	false
 ⌵	uppercase	Primitive	String	true	capitalize capital letter	⌵ "HeLlO WoRlD"	"HELLO WORLD"	false
@@ -40,8 +42,11 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 °/×	prime factorisation	Idiom	Maths	true	decompose factor	°/× 18	[2 3 3]	false
 =1⧻°/×	is prime?	Idiom	Maths	false	primality test	=1⧻°/× 19	1	false
 =1/+>1°/×	is prime?	Idiom	Maths	true	primality test	▽ ⊸(=1/+>1°/×) +₁⇡20	[2 3 5 7 11 13 17 19]	false
-⊚=0◿⊸(⇡+1)	divisors of a positive number	Idiom	Maths	false	divide	⊚=0◿⊸(⇡+1) 20	[1 2 4 5 10 20]	false
+↙⟜(◴⍣⊣⋅[]°/×⇡₂⌈×2×°ₑ⊸+₁)	first n primes	Idiom	Maths	false	primality	↙⟜(◴⍣⊣⋅[]°/×⇡₂⌈×2×°ₑ⊸+₁) 10	[2 3 5 7 11 13 17 19 23 29]	false
+⊚=₀◿⊸⇡₀	divisors of a positive number	Idiom	Maths	false	divide	⊚=₀◿⊸⇡₀ 20	[1 2 4 5 10 20]	false
+▽¬⤚◿⊸⇡₁	divisors of a positive number	Idiom	Maths	false	divide	▽¬⤚◿⊸⇡₁ 20	[1 2 4 5 10 20]	false
 ⊚=0◿⊸⇡	proper divisors of a positive number	Idiom	Maths	false	divide	⊚=0◿⊸⇡ 20	[1 2 4 5 10]	false
+▽¬⤚◿⊸⍜-₁⇡	proper divisors of a positive number	Idiom	Maths	false	divide	▽¬⤚◿⊸⍜-₁⇡ 20	[1 2 4 5 10]	false
 °▽⍆	row occurrence count	Idiom	Array	irrelevant	count times	⊂°▽⍆ 7_3_4_6_7_4	[1 2 1 2 3 4 6 7]	false
 /◇⊂	flatten boxed array	Idiom	Array	false	join boxes concatenate	/◇⊂ {[1 3] [5 2] [3 6]}	[1 3 5 2 3 6]	false
 ⍥/◇⊂∞	flatten nested boxed array	Idiom	Array	true	join boxes concatenate	⍥/◇⊂∞ {{1 4} {[3 4]} [2 5] 4}	[1 4 3 4 2 5 4]	false
@@ -52,9 +57,12 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 ♭₀	first element of array	Primitive	Array	true	first matrix	♭₀ °△2_3_4	0	false
 °⍆	shuffle rows of array	Primitive	Array	irrelevant	random	⍆ °⍆ ⇡5	[0 1 2 3 4]	false
 ⍜∩⋯⬚0×	bitwise and	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0× ⊸+₂⇡5	[0 1 0 1 4]	false
+⍜⋯/×⊟	bitwise and	Idiom	Maths	true	bitwise boolean	⍜⋯/×⊟ ⊸+₂⇡5	[0 1 0 1 4]	false
 ⍜∩⋯⬚0↥	bitwise or	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0↥ ⊸+₂⇡5	[2 3 6 7 6]	false
+⍜⋯/↥⊟	bitwise or	Idiom	Maths	true	bitwise boolean	⍜⋯/↥⊟ ⊸+₂⇡5	[2 3 6 7 6]	false
 ⍜⋯¬	bitwise not	Idiom	Maths	true	bitwise boolean	⍜⋯¬ ⇡8	[7 6 5 4 3 2 1 0]	false
 ⍜∩⋯⬚0≠	bitwise xor	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0≠ ⊸+₂⇡5	[2 2 6 6 2]	false
+⍜⋯/≠⊟	bitwise xor	Idiom	Maths	true	bitwise boolean	⍜⋯/≠⊟ ⊸+₂⇡5	[2 2 6 6 2]	false
 ¬	boolean not	Primitive	Maths	true	logical complement	¬ 1	0	false
 ×	boolean and	Primitive	Maths	true	logical conjunction	× 0 1	0	false
 ↥	boolean or	Primitive	Maths	true	logical disjunction	↥ 0 1	1	false
@@ -79,3 +87,6 @@ path	find path in graph	Primitive	Other	irrelevant	dijkstra A* graph	⊢path(+A�
 ⌈	ceiling (round up)	Primitive	Maths	true	round	⌈ ×⇡₁10 π	[4 7 10 13 16 19 22 26 29 32]	false
 ≠	check inequality	Primitive	Array	true	different nonequal unequal not	≠ ⟜⌵-4⇡9	[1 1 1 1 0 0 0 0 0]	false
 ⌝⊥	evaluate polynomial	Primitive	Maths	false	evalpoly valpoly	≡⌝⊥ ⇡5 ¤ [1 1 2]	[1 4 11 22 37]	false
+⍜⍉⊞(/+×)	matrix product	Idiom	Maths	false	multiply multiplication vector	⊚♭ ˙⍜⍉⊞(/+×) ˙⊞=⇡3	[0 4 8]	false
+°⊏	enumerate array	Primitive	Array	irrelevant	indices	⊂°⊏ [1 4 3 2]	[0 1 2 3 1 4 3 2]	false
+⍜÷(⇡⌈)	range with given step size	Idiom	Array	false	linspace	⍜÷(⇡⌈) 4 20	[0 4 8 12 16]	false
