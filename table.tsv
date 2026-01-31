@@ -90,3 +90,4 @@ path	find path in graph	Primitive	Other	irrelevant	dijkstra A* graph	⊢path(+A�
 ⍜⍉⊞(/+×)	matrix product	Idiom	Maths	false	multiply multiplication vector	⊚♭ ˙⍜⍉⊞(/+×) ˙⊞=⇡3	[0 4 8]	false
 °⊏	enumerate array	Primitive	Array	irrelevant	indices	⊂°⊏ [1 4 3 2]	[0 1 2 3 1 4 3 2]	false
 ⍜÷(⇡⌈)	range with given step size	Idiom	Array	false	linspace	⍜÷(⇡⌈) 4 20	[0 4 8 12 16]	false
+⍜∩⌞÷⍜∩⌊⍜-⇡	range with step, start and end	Idiom	Array	false	linspace	⍜∩⌞÷⍜∩⌊⍜-⇡ 3 5 14	[5 8 11]	false
